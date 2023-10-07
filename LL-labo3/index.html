@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial Ezequiel Moran</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body id="body">
+     
+    <div class="row">
+    
+        <div class="col-md-4">
+            <!-- Vacio -->
+        </div>
+    
+        <div class="col-md-4">
+            
+            <div class="pagina">
+      
+                <h1>Formulario Datos</h1>
+            
+                <div id="divTabla">
+    
+                    <header>
+                        <!-- Filtro -->
+                        <label>Filtrar por:</label>
+                        <select id="filtro">
+                            <option value="Todos" selected>Todos</option>
+                            <option value="Aereo">Aereo</option>
+                            <option value="Terrestre">Terrestre</option>
+                        </select>
+    
+                        <label>Calcular velocidad maxima:</label>
+                        <input type="text" id="velocidadMax" disabled>
+                        <input type="button" id="calcularVelocidadMaxima" value="Calcular">
+                    </header>
+    
+                    <div class="show">
+                        <input type="checkbox" id="Col_id" checked><span>Id</span>
+                        <input type="checkbox" id="Col_Modelo" checked><span>Modelo</span>
+                        <input type="checkbox" id="Col_anoFab" checked><span>AnoFab</span>
+                        <input type="checkbox" id="Col_VelMax" checked><span>VelMax</span>
+                        <input type="checkbox" id="Col_AltMax" checked><span>AltMax</span>
+                        <input type="checkbox" id="Col_Autonomia" checked><span>Autonomia</span>
+                        <input type="checkbox" id="Col_CantPue" checked><span>CantPue</span>
+                        <input type="checkbox" id="Col_CantRue" checked><span>CantRue</span>
+                    </div>
+    
+                    <table id="tabla">
+                        <thead id="tableHead">
+                            <tr id="tableHeadTr" class="sort">
+                                <th><input class="button" type="button" id="orden_Id" value="Id"></th>
+                                <th><input class="button" type="button" id="orden_Modelo" value="Modelo"></th>
+                                <th><input class="button" type="button" id="orden_AnoFab" value="AnoFab"></th>
+                                <th><input class="button" type="button" id="orden_VelMax" value="VelMax"></th>
+                                <th><input class="button" type="button" id="orden_AltMax" value="AltMax"></th>
+                                <th><input class="button" type="button" id="orden_Autonomia" value="Autonomia"></th>
+                                <th><input class="button" type="button" id="orden_CantPuea" value="CantPue"></th>
+                                <th><input class="button" type="button" id="orden_CantRue" value="CantRue"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTabla">
+                            <!--Aca se cargan las personas-->
+                        </tbody>
+                    </table>
+             </div>
+    
+            <div class="alta">
+                <input class="button" type="button" id="nuevoVehicuo" value="Dar de alta">
+            </div>
+    
+            <form class="abm" id="formAbm">
+                <h2> Alta Vehiculo </h2>
+                <div><label>ID:</label><input type="number" id="inputId" name="id" disabled></div>                
+                <div><label>Modelo:</label><input type="text" id="inputModelo" name="modelo" ></div>                    
+                <div><label>Año Fabricacion:</label><input type="text" id="inputAnoFab" name="anoFab"></div>
+                <div><label>Velocidad Maxima:</label><input type="text" id="inputVelMax" name="velMax" ></div>
+                <div id="divSelect">
+                    <label>Tipo:</label>
+                    <select id="select">
+                        <option value="Aereo">Aereo</option>
+                        <option value="Terrestre">Terrestre</option>
+                    </select>
+                </div>
+
+                <div><label id="lblOpcional1">Altura Maxima:</label><input type="text" id="inputOpcional1" ></div>
+                <div><label id="lblOpcional2">Automania:</label><input type="text" id="inputOpcional2" ></div>
+                <div><label id="lblOpcional3">Cantidad Puerta:</label><input type="text" id="inputOpcional3" ></div>
+                <div><label id="lblOpcional4">Cantidad Ruedas:</label><input type="text" id="inputOpcional4" ></div> 
+                
+                
+                <label id="error" class="error"></label>
+                <div class="botones">
+                    <input type="button" class="boton" id="nuevo" value="Alta">
+                    <input type="button" class="boton" id="modificar" value="Modificar">
+                    <input type="button" class="boton" id="eliminar" value="Eliminar">
+                    <input type="button" class="boton" id="cancelar" value="Cancelar">
+                </div>
+    
+            </form>
+
+        </div>
+             <!-- Formulario ABM -->
+        <div class="col-md-4">
+              
+        
+        </div>
+    </div>
+    
+</body>
+<script src="app.js" type="module"></script>
+</html>
